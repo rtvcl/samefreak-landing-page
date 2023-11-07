@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${bigShoulderDisplay.variable} font-sans`}>
+      <body className={`${bigShoulderDisplay.variable} font-sans bg-primary-800 text-white`}>
         {children}
       </body>
     </html>
