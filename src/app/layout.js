@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Big_Shoulders_Display } from "next/font/google";
 import { Toaster } from "../components/ui/toaster"
 import "./globals.css";
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <body className={`${bigShoulderDisplay.variable} font-sans bg-primary-800 text-white`}>
         {children}
         <Toaster/>
+        <Analytics/>
       </body>
     </html>
   );
