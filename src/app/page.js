@@ -1,29 +1,30 @@
 import Image from "next/image";
-import BannerPNG from "@/assets/banner.png";
+import BannerPNG from "@/assets/banner-0.png";
 import Showcase1PNG from "@/assets/showcase-1.png";
 import MusicSVG from "@/assets/music-svg";
 import BeersSVG from "@/assets/beers-svg";
 import TicketSVG from "@/assets/ticket-svg";
-
 export default function Home() {
   return (
     <div>
       {/* hero */}
-      <div className="container flex flex-col justify-center min-h-screen mx-auto text-center">
-        <h1 className="font-black leading-[0.8] font-display text-[20vw] md:text-9xl">
+      <div className="flex flex-col md:justify-center min-h-[100vh] md:min-h-screen mx-auto text-center">
+        <h1 className="font-black leading-[0.8] font-display text-[20vw] order-2 md:order-none md:text-9xl">
           SAMEFREAK
         </h1>
-        <h4 className="text-lg font-extrabold md:text-2xl font-display">
+        <h4 className="order-3 text-lg font-extrabold md:order-none md:text-2xl font-display">
           FIND YOUR SAME-FREQUENCIES SOULMATE
         </h4>
-        <Image
-          src={BannerPNG}
-          alt="banner"
-          className="mx-auto my-4"
-          quality={100}
-        />
-        <div className="flex flex-col items-center mx-4 space-y-2 md:mx-0">
-          <p className="max-w-xl">
+        <figure className="relative order-1 w-full h-[76vh] md:h-60 md:my-4 mb-6 md:order-none">
+          <Image
+            src={BannerPNG}
+            alt="banner"
+            fill
+            className="object-cover"
+          />
+        </figure>
+        <div className="flex flex-col items-center order-4 mx-4 space-y-2 md:order-none md:mx-0">
+          <p className="hidden max-w-xl md:block">
             No more awkward silences – dive straight into the songs and places
             that fuel your passion, and put a whole new spin on match-making.
           </p>
@@ -31,7 +32,7 @@ export default function Home() {
             <input
               className="flex-1 py-1 text-sm bg-transparent focus:outline-none text-primary-950 min-w-lg"
               type="text"
-              placeholder="luke.zkywalker@jedie.xyz"
+              placeholder="luke.zkywalker@starwa.rz"
             />
             <button
               className="px-4 text-sm font-semibold tracking-tight rounded-full shadow-md bg-secondary-400 text-primary-900"
@@ -43,23 +44,23 @@ export default function Home() {
         </div>
       </div>
       {/* highlight 1 */}
-      <div className="bg-black">
-        <div className="container flex justify-between py-12 mx-auto">
-          <div className="pt-16 pr-8 space-y-8">
+      <div className="mt-8 bg-black">
+        <div className="container flex flex-col justify-between px-8 py-8 mx-auto space-y-8 md:px-0 md:py-12 md:flex-row">
+          <div className="pt-8 pr-8 space-y-8 md:pt-16">
             <h3 className="text-2xl font-semibold">Music Powered</h3>
-            <h2 className="text-4xl font-bold text-secondary-400 font-display">
+            <h2 className="max-w-lg text-4xl font-bold text-secondary-400 font-display">
               Connect on the tunes that make you tick and find the perfect
               first-date spots.
             </h2>
           </div>
-          <Image height={400} src={Showcase1PNG} alt="showcase 1" />
+          <Image className="self-end" height={400} src={Showcase1PNG} alt="showcase 1" />
         </div>
       </div>
 
       {/* highligh 2 */}
       <div className="container pb-16 mx-auto">
         <div className="flex flex-col py-16">
-          <h2 className="mb-8 text-xl font-semibold text-center text-secondary-400">
+          <h2 className="max-w-sm mx-auto mb-8 text-xl font-semibold text-center md:max-w-none text-secondary-400">
             Unleash your inner Freak. Match based on your interests.
           </h2>
           <ul className="max-w-2xl mx-auto space-y-4">
@@ -108,7 +109,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="flex space-x-4">
+        <div className="flex flex-col mx-4 space-y-4 md:space-y-0 md:mx-0 md:space-x-4 md:flex-row">
           <div className="flex-1">
             <h4 className="mb-8 text-xl font-semibold text-secondary-400">
               What makes SameFreak stand out?
@@ -136,7 +137,9 @@ export default function Home() {
       {/* footer */}
       <div className="py-6 mt-8 bg-accent-600">
         <div className="flex flex-col items-center mx-4 mb-16 md:mx-0">
-          <h3 className="mb-4 text-4xl font-bold uppercase font-display">Join Now</h3>
+          <h3 className="mb-4 text-4xl font-bold uppercase font-display">
+            Join Now
+          </h3>
           <p className="max-w-xl mb-8 text-center">
             No more awkward silences – dive straight into the songs and places
             that fuel your passion, and put a whole new spin on match-making.
@@ -145,7 +148,7 @@ export default function Home() {
             <input
               className="flex-1 py-1 text-sm bg-transparent focus:outline-none text-primary-950 min-w-lg"
               type="text"
-              placeholder="luke.zkywalker@jedie.xyz"
+              placeholder="luke.zkywalker@starwa.rz"
             />
             <button
               className="px-4 text-sm font-semibold tracking-tight rounded-full shadow-md bg-secondary-400 text-primary-900"
@@ -156,7 +159,9 @@ export default function Home() {
           </form>
         </div>
 
-        <footer className="text-center muted">2023 © SameFreak Inc., All rights reserved.</footer>
+        <footer className="text-center muted">
+          2023 © SameFreak Inc., All rights reserved.
+        </footer>
       </div>
     </div>
   );
