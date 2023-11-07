@@ -1,4 +1,5 @@
-import { Plus_Jakarta_Sans, Big_Shoulders_Display } from "next/font/google";
+import { Big_Shoulders_Display } from "next/font/google";
+import { Toaster } from "../components/ui/toaster"
 import "./globals.css";
 
 const bigShoulderDisplay = Big_Shoulders_Display({subsets: ['latin'], variable: '--font-big-shoulders-display'})
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${bigShoulderDisplay.variable} font-sans bg-primary-800 text-white`}>
         {children}
+        <Toaster/>
       </body>
     </html>
   );

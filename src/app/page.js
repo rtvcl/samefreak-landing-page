@@ -4,18 +4,19 @@ import Showcase1PNG from "@/assets/showcase-1.png";
 import MusicSVG from "@/assets/music-svg";
 import BeersSVG from "@/assets/beers-svg";
 import TicketSVG from "@/assets/ticket-svg";
+import FormWaitlist from "@/components/waitlist-form";
 export default function Home() {
   return (
     <div>
       {/* hero */}
       <div className="flex flex-col md:justify-center min-h-[100vh] md:min-h-screen mx-auto text-center">
-        <h1 className="font-black leading-[0.8] font-display text-[20vw] order-2 md:order-none md:text-9xl">
+        <h1 className="font-black leading-[0.8] font-display text-[16vw] order-2 md:order-none md:text-9xl">
           SAMEFREAK
         </h1>
         <h4 className="order-3 text-lg font-extrabold md:order-none md:text-2xl font-display">
           FIND YOUR SAME-FREQUENCIES SOULMATE
         </h4>
-        <figure className="relative order-1 w-full h-[76vh] md:h-60 md:my-4 mb-6 md:order-none">
+        <figure className="relative order-1 w-full h-[70vh] md:h-60 md:my-4 mb-6 md:order-none">
           <Image
             src={BannerPNG}
             alt="banner"
@@ -28,19 +29,7 @@ export default function Home() {
             No more awkward silences – dive straight into the songs and places
             that fuel your passion, and put a whole new spin on match-making.
           </p>
-          <form className="flex w-full py-1 pl-4 pr-1 rounded-full md:max-w-md bg-secondary-50/80">
-            <input
-              className="flex-1 py-1 text-sm bg-transparent focus:outline-none text-primary-950 min-w-lg"
-              type="text"
-              placeholder="luke.zkywalker@starwa.rz"
-            />
-            <button
-              className="px-4 text-sm font-semibold tracking-tight rounded-full shadow-md bg-secondary-400 text-primary-900"
-              type="submit"
-            >
-              Join the waiting list
-            </button>
-          </form>
+          <FormWaitlist/>
         </div>
       </div>
       {/* highlight 1 */}
@@ -144,19 +133,7 @@ export default function Home() {
             No more awkward silences – dive straight into the songs and places
             that fuel your passion, and put a whole new spin on match-making.
           </p>
-          <form className="flex w-full py-1 pl-4 pr-1 rounded-full md:max-w-md bg-secondary-50/80">
-            <input
-              className="flex-1 py-1 text-sm bg-transparent focus:outline-none text-primary-950 min-w-lg"
-              type="text"
-              placeholder="luke.zkywalker@starwa.rz"
-            />
-            <button
-              className="px-4 text-sm font-semibold tracking-tight rounded-full shadow-md bg-secondary-400 text-primary-900"
-              type="submit"
-            >
-              Join the waiting list
-            </button>
-          </form>
+          <FormWaitlist/>
         </div>
 
         <footer className="text-center muted">
